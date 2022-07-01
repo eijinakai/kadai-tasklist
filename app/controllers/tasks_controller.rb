@@ -20,6 +20,7 @@ class TasksController < ApplicationController
     else
       flash.now[:danger] = 'Task が投稿されませんでした'
       render :new
+    end
   end
 
   def edit
@@ -35,6 +36,7 @@ class TasksController < ApplicationController
     else
       flash.now[:danger] = 'Task は更新されませんでした'
       render :edit
+    end
   end
 
   def destroy
@@ -51,3 +53,4 @@ class TasksController < ApplicationController
   def task_params
     params.require(:task).permit(:content)
   end
+end
